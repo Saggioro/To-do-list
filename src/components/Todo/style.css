@@ -1,0 +1,29 @@
+.todo {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.todo .todo-content {
+  min-width: 450px;
+  width: 500px;
+
+  padding-top: 15px;
+  padding-bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #2e2e37, #1f1f28);
+
+  color: #eeeeee;
+}
+
+.addCard {
+  justify-content: space-around;
+}

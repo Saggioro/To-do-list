@@ -1,0 +1,61 @@
+.card {
+  margin-top: 15px;
+  width: 80%;
+  height: 60px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-radius: 10px;
+
+  transition: transform 0.2s;
+}
+
+.cardHover:hover {
+  transform: translateX(20px);
+}
+
+.card input {
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 5px;
+}
+
+.card .error {
+  border: 1.5px red solid;
+  border-radius: 5px;
+}
+
+.card input:focus {
+  border: none;
+  background: transparent;
+  color: inherit;
+  border: none;
+}
+
+.card button {
+  background: none;
+  text-decoration: none;
+
+  border: none;
+  display: flex;
+}
+
+.card .buttons {
+  height: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  left: -29px;
+  z-index: -1;
+}
+
+.card .checked {
+  text-decoration: line-through;
+}
