@@ -57,5 +57,5 @@
 }
 
 .card .checked {
-  text-decoration: line-through;
+  text-decoration: line-through black 2px;
 }
