@@ -4,9 +4,9 @@ import React from "react";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { AiFillDelete, AiFillCheckSquare } from "react-icons/ai";
 import "./style.css";
-import Card from "../Card";
-import Input from "../Input";
-import { colors } from "../Card";
+import Card from "../../components/Card";
+import Input from "../../components/Input";
+import { colors } from "../../components/Card";
 
 function Todo({ children }) {
   const initialState = {
@@ -71,6 +71,7 @@ function Todo({ children }) {
                   key={index}
                   color={color[0]}
                   setItem={setItem}
+                  item={item}
                   selected={item}
                   name="cor"
                 ></Input>

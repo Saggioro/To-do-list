@@ -9,8 +9,13 @@
   height: 15px;
   margin-left: 5px;
   border-radius: 50%;
-
   border: 0.2px solid #2c2935;
+  cursor: pointer;
+}
+
+.radioLabel:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px white;
+  box-shadow: 0px 0px 0px 2px white;
 }
 
 #checked {
