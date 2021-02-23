@@ -2,13 +2,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { BsFillPlusCircleFill } from "react-icons/bs";
-import { AiFillDelete, AiFillCheckSquare } from "react-icons/ai";
+import { AiFillDelete, AiFillCheckSquare, AiFillEdit } from "react-icons/ai";
 import "./style.css";
 import Card from "../../components/Card";
 import Input from "../../components/Input";
 import { colors } from "../../components/Card";
 
-function Todo({ children }) {
+function Todo() {
   const initialState = {
     tarefa: "",
     cor: "orange",
@@ -18,17 +18,18 @@ function Todo({ children }) {
   const [cards, setCards] = React.useState([]);
   const [item, setItem] = React.useState(initialState);
   const [error, setError] = React.useState(false);
+  const [edit, setEdit] = React.useState({});
 
   function handleChange({ target }) {
     setItem({ ...item, [target.name]: target.value });
   }
   function handleAddCard() {
-    if (item.tarefa) {
+    if (!item.tarefa.trim()) {
+      setError(true);
+    } else {
       setCards([...cards, item]);
       setItem(initialState);
       setError(false);
-    } else {
-      setError(true);
     }
   }
 
@@ -89,9 +90,9 @@ function Todo({ children }) {
                 <button onClick={() => handleDelete(index)} type="button">
                   <AiFillDelete color="white" />
                 </button>
-                {/* <button type="button">
-                    <AiFillEdit color="white" />
-                  </button> */}
+                <button type="button">
+                  <AiFillEdit color="white" />
+                </button>
                 <button onClick={() => handleCheck(index)} type="button">
                   <AiFillCheckSquare color="white" />
                 </button>

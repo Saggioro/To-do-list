@@ -8,7 +8,7 @@ function Input({ item, color, setItem, name, selected }) {
         onChange={(e) => setItem((item) => ({ ...item, cor: e.target.value }))}
         value={color}
         id={color}
-        checked={(item.color = color)}
+        checked={item.color === color}
         type="radio"
         name={name}
       ></input>
