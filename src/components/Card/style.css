@@ -1,6 +1,7 @@
 .card {
   margin-top: 15px;
   width: 80%;
+  max-width: 80%;
   height: 60px;
   padding: 10px;
 
@@ -39,14 +40,13 @@
 .card button {
   background: none;
   text-decoration: none;
+  cursor: pointer;
 
   border: none;
   display: flex;
 }
 
 .card .buttons {
-  height: 45px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,4 +58,9 @@
 
 .card .checked {
   text-decoration: line-through black 2px;
+}
+
+.card p {
+  width: 90%;
+  word-wrap: break-word;
 }

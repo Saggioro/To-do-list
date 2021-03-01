@@ -18,10 +18,18 @@
   flex-direction: column;
 
   align-items: center;
+
+  border: 1px solid;
+  border-color: #b177fb;
   border-radius: 10px;
   background-image: linear-gradient(to right, #2e2e37, #1f1f28);
 
   color: #eeeeee;
+}
+.todo .todo-content h1 {
+  border-bottom: solid white 1px;
+
+  margin-bottom: 15px;
 }
 
 .addCard {
